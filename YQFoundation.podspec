@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+		   iOS 基础库
                    DESC
 
   s.homepage     = "https://github.com/GitHubLcy/YQFoundation.git"
