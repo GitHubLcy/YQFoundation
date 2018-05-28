@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YQFoundation"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "iOS 基础库"
 
   s.description  = <<-DESC
@@ -16,12 +16,15 @@ Pod::Spec.new do |s|
 
   s.author             = { "SpringSunLcy" => "13391550973@163.com" }
 
-  s.platform     = :ios, "8.0"
-  s.ios.deployment_target = "8.0"
+  s.platform     = :ios, "9.0"
+  s.ios.deployment_target = "9.0"
 
   s.source       = { :git => "https://github.com/GitHubLcy/YQFoundation.git", :tag => "#{s.version}" }
 
   s.source_files  = "YQFoundation/YQFoundation/Classes/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+
+  s.subspec 'UI' do |ss|
+    ss.source_files = 'Classes/**/*.{h,m}'
+  end
 
 end
