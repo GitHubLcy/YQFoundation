@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YQFoundation"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "iOS 基础库"
 
   s.description  = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.source_files  = "YQFoundation/YQFoundation/Classes/*.{h,m}"
 
   s.subspec 'UI' do |ss|
-    ss.source_files = 'Classes/**/*.{h,m}'
+    ss.source_files = 'YQFoundation/YQFoundation/Classes/**/*.{h,m}'
   end
 
 end
