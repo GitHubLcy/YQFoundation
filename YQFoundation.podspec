@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YQFoundation"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "iOS 基础库"
 
   s.description  = <<-DESC
