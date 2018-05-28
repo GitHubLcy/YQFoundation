@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2D33FB20BBE01600CF08EF /* UIView+ModifyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */; };
 		2BACCB7820B6A309008BC17F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB7720B6A309008BC17F /* AppDelegate.m */; };
 		2BACCB7B20B6A309008BC17F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB7A20B6A309008BC17F /* ViewController.m */; };
 		2BACCB7E20B6A309008BC17F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BACCB7C20B6A309008BC17F /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		2BACCB8620B6A30C008BC17F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB8520B6A30C008BC17F /* main.m */; };
 		2BACCB9020B6A30C008BC17F /* YQFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB8F20B6A30C008BC17F /* YQFoundationTests.m */; };
 		2BACCB9B20B6A30C008BC17F /* YQFoundationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB9A20B6A30C008BC17F /* YQFoundationUITests.m */; };
-		2BACCBB220B6A6A8008BC17F /* UIView+ModifyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCBB120B6A6A8008BC17F /* UIView+ModifyFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B2D33B320B7F37F00CF08EF /* YQFoundationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQFoundationHeader.h; sourceTree = "<group>"; };
+		2B2D33F820BBE01600CF08EF /* UIView+ModifyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModifyFrame.h"; sourceTree = "<group>"; };
+		2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModifyFrame.m"; sourceTree = "<group>"; };
+		2B2D33FA20BBE01600CF08EF /* YQFoundationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQFoundationHeader.h; sourceTree = "<group>"; };
 		2BACCB7320B6A309008BC17F /* YQFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BACCB7620B6A309008BC17F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BACCB7720B6A309008BC17F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,8 +55,6 @@
 		2BACCB9620B6A30C008BC17F /* YQFoundationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQFoundationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BACCB9A20B6A30C008BC17F /* YQFoundationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQFoundationUITests.m; sourceTree = "<group>"; };
 		2BACCB9C20B6A30C008BC17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BACCBB020B6A6A8008BC17F /* UIView+ModifyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModifyFrame.h"; sourceTree = "<group>"; };
-		2BACCBB120B6A6A8008BC17F /* UIView+ModifyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModifyFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2D33F620BBE01600CF08EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D33F720BBE01600CF08EF /* UI */,
+				2B2D33FA20BBE01600CF08EF /* YQFoundationHeader.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2B2D33F720BBE01600CF08EF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D33F820BBE01600CF08EF /* UIView+ModifyFrame.h */,
+				2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		2BACCB6A20B6A309008BC17F = {
 			isa = PBXGroup;
 			children = (
+				2B2D33F620BBE01600CF08EF /* Classes */,
 				2BACCB7520B6A309008BC17F /* YQFoundation */,
 				2BACCB8E20B6A30C008BC17F /* YQFoundationTests */,
 				2BACCB9920B6A30C008BC17F /* YQFoundationUITests */,
@@ -105,7 +124,6 @@
 		2BACCB7520B6A309008BC17F /* YQFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				2BACCBA820B6A342008BC17F /* Classes */,
 				2BACCB7620B6A309008BC17F /* AppDelegate.h */,
 				2BACCB7720B6A309008BC17F /* AppDelegate.m */,
 				2BACCB7920B6A309008BC17F /* ViewController.h */,
@@ -135,24 +153,6 @@
 				2BACCB9C20B6A30C008BC17F /* Info.plist */,
 			);
 			path = YQFoundationUITests;
-			sourceTree = "<group>";
-		};
-		2BACCBA820B6A342008BC17F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2BACCBAF20B6A6A8008BC17F /* UI */,
-				2B2D33B320B7F37F00CF08EF /* YQFoundationHeader.h */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		2BACCBAF20B6A6A8008BC17F /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				2BACCBB020B6A6A8008BC17F /* UIView+ModifyFrame.h */,
-				2BACCBB120B6A6A8008BC17F /* UIView+ModifyFrame.m */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +287,7 @@
 			files = (
 				2BACCB7B20B6A309008BC17F /* ViewController.m in Sources */,
 				2BACCB8620B6A30C008BC17F /* main.m in Sources */,
-				2BACCBB220B6A6A8008BC17F /* UIView+ModifyFrame.m in Sources */,
+				2B2D33FB20BBE01600CF08EF /* UIView+ModifyFrame.m in Sources */,
 				2BACCB7820B6A309008BC17F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
