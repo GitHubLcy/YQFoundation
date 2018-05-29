@@ -1,6 +1,13 @@
-
+//
+//  NSString+Hashing.m
+//  YQFoundation
+//
+//  Created by ssl on 2018/5/29.
+//  Copyright © 2018年 ssl. All rights reserved.
+//
 
 #import "NSString+Hashing.h"
+
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (NSString_Hashing)
@@ -55,7 +62,7 @@
                    digest[12], digest[13],  
                    digest[14], digest[15]];  
     return s;  
-}  
+}   
 
 - (NSString *)getSHA512String:(NSString *)srcString
 {
@@ -70,4 +77,5 @@
     }
     return result;
 }
+
 @end

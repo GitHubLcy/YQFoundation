@@ -1,21 +1,14 @@
 //
 //  UIView+ModifyFrame.h
-//  babyshow_ios
+//  YQFoundation
 //
-//  Created by licy on 14-2-14.
-//  Copyright (c) 2014年 platomix.dw. All rights reserved.
-//
+//  Created by ssl on 2018/5/29.
+//  Copyright © 2018年 ssl. All rights reserved.
+//  
 
 #import <UIKit/UIKit.h>
 
 @interface UIView (ModifyFrame)
-
-- (void) makeCorner:(float)r;
-
-/**
- * The view controller whose view contains this view.
- */
-- (UIViewController*)viewController;
 
 @property float x;
 @property float y;
@@ -37,16 +30,5 @@
 
 @property (nonatomic,assign) CGFloat centerX;
 @property (nonatomic,assign) CGFloat centerY;
-
-/*
- * 为view添加描边颜色和宽度
- */
-- (void)setBorderWidth:(CGFloat)borderWidth color:(UIColor *)color;
-- (void)setCornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)borderWidth;
-- (void)setTopCornerBounds:(CGRect)bounds corner:(CGFloat)corner;
-- (void)setBottomCornerBounds:(CGRect)bounds corner:(CGFloat)corner;
-
-- (void)removeAllSubViews;
-- (void)removeSubViewAtIndex:(NSInteger)index;
 
 @end

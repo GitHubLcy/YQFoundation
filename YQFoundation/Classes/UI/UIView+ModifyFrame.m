@@ -1,9 +1,9 @@
 //
 //  UIView+ModifyFrame.m
-//  babyshow_ios
+//  YQFoundation
 //
-//  Created by licy on 14-2-14.
-//  Copyright (c) 2014年 platomix.dw. All rights reserved.
+//  Created by ssl on 2018/5/29.
+//  Copyright © 2018年 ssl. All rights reserved.
 //
 
 #import "UIView+ModifyFrame.h"
@@ -21,7 +21,7 @@
 }
 
 - (float)minY
-{   
+{
     return CGRectGetMinY(self.frame);
 }
 
@@ -69,24 +69,24 @@
     }
 }
 
-- (float) x
+- (float)x
 {
     return self.frame.origin.x;
 }
 
-- (void) setX:(float) newX
+- (void)setX:(float) newX
 {
     CGRect frame = self.frame;
     frame.origin.x = newX;
     self.frame = frame;
 }
 
--(float) y
+- (float)y
 {
     return self.frame.origin.y;
 }
 
-- (void) setY:(float) newY
+- (void)setY:(float) newY
 {
     CGRect frame = self.frame;
     frame.origin.y = newY;
@@ -98,19 +98,19 @@
     return self.frame.size.width;
 }
 
--(void) setWidth:(float) newWidth
+- (void)setWidth:(float) newWidth
 {
     CGRect frame = self.frame;
     frame.size.width = newWidth;
     self.frame = frame;
 }
 
-- (float) height
+- (float)height
 {
     return self.frame.size.height;
 }
 
-- (void) setHeight:(float) newHeight
+- (void)setHeight:(float) newHeight
 {
     CGRect frame = self.frame;
     frame.size.height = newHeight;
@@ -146,7 +146,7 @@
     return self.frame.origin.x;
 }
 
-- (void) setLeft: (CGFloat) newleft
+- (void)setLeft: (CGFloat) newleft
 {
     CGRect newframe = self.frame;
     newframe.origin.x = newleft;
@@ -158,7 +158,7 @@
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void) setRight: (CGFloat) newright
+- (void)setRight: (CGFloat) newright
 {
     CGFloat delta = newright - (self.frame.origin.x + self.frame.size.width);
     CGRect newframe = self.frame;
@@ -171,7 +171,7 @@
     return self.frame.origin.y;
 }
 
-- (void) setTop: (CGFloat) newtop
+- (void)setTop: (CGFloat) newtop
 {
     CGRect newframe = self.frame;
     newframe.origin.y = newtop;
@@ -213,64 +213,5 @@
 {
     return self.center.y;
 }
-
-- (UIViewController*)viewController
-{
-    for (UIView* next = [self superview]; next; next = next.superview) {
-        UIResponder* nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController*)nextResponder;
-        }
-    }
-    return nil;
-}
-
-- (void)setCornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)borderWidth
-{
-    self.layer.cornerRadius = radius;
-    [self setBorderWidth:borderWidth color:color];
-}
-
-- (void)setTopCornerBounds:(CGRect)bounds corner:(CGFloat)corner
-{
-    CGRect mbounds = bounds;
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:mbounds
-                                                   byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight
-                                                         cornerRadii:CGSizeMake(corner,corner)];
-    //创建CALayer图层
-    CAShapeLayer*maskLayer = [[CAShapeLayer  alloc]  init];
-    maskLayer.frame = mbounds;
-    maskLayer.path = maskPath.CGPath;
-    self.layer.mask = maskLayer;
-}
-
-- (void)setBottomCornerBounds:(CGRect)bounds corner:(CGFloat)corner
-{
-    CGRect mbounds = bounds;
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:mbounds
-                                                   byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight
-                                                         cornerRadii:CGSizeMake(corner,corner)];
-    //创建CALayer图层
-    CAShapeLayer*maskLayer = [[CAShapeLayer  alloc]  init];
-    maskLayer.frame = mbounds;
-    maskLayer.path = maskPath.CGPath;
-    self.layer.mask = maskLayer;
-}
-
-- (void)removeAllSubViews
-{
-    for (UIView *subview in self.subviews) {
-        [subview removeFromSuperview];
-    }
-}
-
-- (void)removeSubViewAtIndex:(NSInteger)index
-{
-    if (self.subviews.count > index) {
-        UIView *tempView = [self.subviews objectAtIndex:index];
-        [tempView removeFromSuperview];
-    }
-}
-
 
 @end
