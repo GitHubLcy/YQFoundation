@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B2D33FB20BBE01600CF08EF /* UIView+ModifyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */; };
+		2B30626F20BD420C0013199C /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B30626D20BD420C0013199C /* NSString+Hashing.m */; };
 		2BACCB7820B6A309008BC17F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB7720B6A309008BC17F /* AppDelegate.m */; };
 		2BACCB7B20B6A309008BC17F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BACCB7A20B6A309008BC17F /* ViewController.m */; };
 		2BACCB7E20B6A309008BC17F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BACCB7C20B6A309008BC17F /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		2B2D33F820BBE01600CF08EF /* UIView+ModifyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ModifyFrame.h"; sourceTree = "<group>"; };
 		2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ModifyFrame.m"; sourceTree = "<group>"; };
 		2B2D33FA20BBE01600CF08EF /* YQFoundationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQFoundationHeader.h; sourceTree = "<group>"; };
+		2B30626D20BD420C0013199C /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
+		2B30626E20BD420C0013199C /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
 		2BACCB7320B6A309008BC17F /* YQFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BACCB7620B6A309008BC17F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BACCB7720B6A309008BC17F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		2B2D33F620BBE01600CF08EF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2B30626C20BD420C0013199C /* Category */,
 				2B2D33F720BBE01600CF08EF /* UI */,
 				2B2D33FA20BBE01600CF08EF /* YQFoundationHeader.h */,
 			);
@@ -98,6 +102,15 @@
 				2B2D33F920BBE01600CF08EF /* UIView+ModifyFrame.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2B30626C20BD420C0013199C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2B30626E20BD420C0013199C /* NSString+Hashing.h */,
+				2B30626D20BD420C0013199C /* NSString+Hashing.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		2BACCB6A20B6A309008BC17F = {
@@ -289,6 +302,7 @@
 				2BACCB8620B6A30C008BC17F /* main.m in Sources */,
 				2B2D33FB20BBE01600CF08EF /* UIView+ModifyFrame.m in Sources */,
 				2BACCB7820B6A309008BC17F /* AppDelegate.m in Sources */,
+				2B30626F20BD420C0013199C /* NSString+Hashing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
